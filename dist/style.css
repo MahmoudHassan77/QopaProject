@@ -36,6 +36,7 @@ html {
 .vidPlayer video {
   width: 85%;
   height: 400px;
+  border-radius: 20px;
 }
 .background {
   height: 100%;
@@ -60,88 +61,6 @@ html {
   overflow-x: hidden;
 }
 
-.album h1 {
-  margin: 150px auto 30px auto;
-  text-align: center;
-  color: #fff;
-}
-
-.album .hi-slide {
-  position: relative;
-  width: 754px;
-  height: 292px;
-  margin: 115px auto 0;
-}
-
-.album .hi-slide .hi-next,
-.album .hi-slide .hi-prev {
-  position: absolute;
-  top: 50%;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  border-radius: 50px;
-  line-height: 40px;
-  text-align: center;
-  cursor: pointer;
-  background-color: #fff;
-  color: black;
-  transition: all 0.6s;
-  font-size: 20px;
-  font-weight: bold;
-  border: 2px solid #333;
-}
-.hi-slide .hi-next:hover,
-.hi-slide .hi-prev:hover {
-  opacity: 1;
-  background-color: #333;
-  color: #fff;
-}
-
-.hi-slide .hi-prev {
-  left: -60px;
-}
-
-.hi-slide .hi-prev::before {
-  content: "<";
-}
-.hi-slide .hi-next {
-  right: -60px;
-}
-.hi-slide .hi-next::before {
-  content: ">";
-}
-
-.hi-slide > ul {
-  list-style: none;
-  position: relative;
-  width: 754px;
-  height: 292px;
-  margin: 0;
-  padding: 0;
-}
-
-.hi-slide > ul > li {
-  overflow: hidden;
-  position: absolute;
-  z-index: 0;
-  left: 377px;
-  top: 146px;
-  width: 0;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  border: 3px solid #fff;
-  background-color: #333;
-  cursor: pointer;
-}
-
-.hi-slide > ul > li > img {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-}
-
 .albHedDiv {
   width: 100%;
   height: 100px;
@@ -151,7 +70,7 @@ html {
   color: #333;
 }
 .albumHed {
-  color: #333;
+  color: #fff;
   margin-left: 10px;
   font-size: 50px;
 }
@@ -189,6 +108,7 @@ html {
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s;
+  z-index: 100;
 }
 
 .to-top.active {
@@ -329,4 +249,377 @@ html {
 }
 .invalid-message {
   display: inline-block;
+}
+.slider,
+.slider > div {
+  background-position: center center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  overflow: hidden;
+  -moz-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+  -webkit-transition: transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.slider > div {
+  position: absolute;
+}
+
+.slider > i {
+  color: #5bbd72;
+  position: absolute;
+  font-size: 60px;
+  margin: 20px;
+  top: 40%;
+  text-shadow: 0 10px 2px #223422;
+  transition: 0.3s;
+  width: 30px;
+  padding: 10px 13px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  line-height: 0;
+  box-sizing: content-box;
+  border-radius: 3px;
+  z-index: 4;
+}
+
+.slider > i svg {
+  margin-top: 3px;
+}
+
+.slider > .left {
+  left: -100px;
+}
+.slider > .right {
+  right: -100px;
+}
+.slider:hover > .left {
+  left: 0;
+}
+.slider:hover > .right {
+  right: 0;
+}
+
+.slider > i:hover {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateX(-2px);
+}
+
+.slider > i.right:hover {
+  transform: translateX(2px);
+}
+
+.slider > i.right:active,
+.slider > i.left:active {
+  transform: translateY(1px);
+}
+
+.slider:hover > div {
+  transform: scale(1.01);
+}
+
+.hoverZoomOff:hover > div {
+  transform: scale(1);
+}
+
+.slider > ul {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 4;
+  padding: 0;
+  margin: 0;
+  transform: translateX(-50%);
+}
+
+.slider > ul > li {
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  list-style: none;
+  float: left;
+  margin: 10px 10px 0;
+  cursor: pointer;
+  border: 1px solid #fff;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.slider > ul > .showli {
+  background-color: #7ec03d;
+  -moz-animation: boing 0.5s forwards;
+  -o-animation: boing 0.5s forwards;
+  -webkit-animation: boing 0.5s forwards;
+  animation: boing 0.5s forwards;
+}
+
+.slider > ul > li:hover {
+  background-color: #7ec03d;
+}
+
+.slider > .show {
+  z-index: 1;
+}
+
+.hideDots > ul {
+  display: none;
+}
+
+.showArrows > .left {
+  left: 0;
+}
+
+.showArrows > .right {
+  right: 0;
+}
+
+.titleBar {
+  z-index: 2;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: 0.3s;
+  color: #fff;
+}
+
+.titleBar * {
+  transform: translate(-20px, 30px);
+  transition: all 700ms cubic-bezier(0.37, 0.31, 0.2, 0.85) 200ms;
+  opacity: 0;
+}
+
+.titleBarTop .titleBar * {
+  transform: translate(-20px, -30px);
+}
+
+.slider:hover .titleBar,
+.slider:hover .titleBar * {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.titleBarTop .titleBar {
+  top: 0;
+  bottom: initial;
+  transform: translateY(-100%);
+}
+
+.slider > div span {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+#imageAlbum {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+@keyframes boing {
+  0% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(0.6);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hedDiv {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vidPlayer {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .vidPlayer h1 {
+    color: rgb(8, 121, 23);
+    font-size: 70px;
+  }
+  .vidPlayer h1 span {
+    color: rgb(204, 207, 15);
+  }
+  .vidPlayer video {
+    width: 90%;
+    height: 400px;
+    border-radius: 20px;
+  }
+  .background {
+    height: 40%;
+    width: 100%;
+    background-color: rgb(204, 174, 119);
+    background-image: url(https://pbs.twimg.com/media/Cc2FNgSWwAAYx-b.jpg);
+    background-repeat: unset;
+    background-size: cover;
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 49% 58%, 0 100%);
+  }
+  .albumHed {
+    margin-left: 10px;
+    font-size: 30px;
+  }
+  .desc {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    margin-bottom: 30px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .desc p {
+    width: 100%;
+    margin-right: 10px;
+    font-size: 30px;
+    color: #fff;
+  }
+  .desc p span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .contact {
+    flex-direction: column;
+    height: 200vh;
+  }
+  .about {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .authImg {
+    margin: 20px;
+    height: 50%;
+    width: 70%;
+    background-image: url(../media/auth.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(
+      50% 0%,
+      90% 20%,
+      100% 60%,
+      75% 100%,
+      25% 100%,
+      0% 60%,
+      10% 20%
+    );
+  }
+  .authinfo {
+    height: 50%;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: border 3s;
+  }
+  .formCont {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    background-color: #333;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .formCont form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    color: #fff;
+    width: 100%;
+  }
+
+  .formCont h1 {
+    margin-left: 0px;
+    color: #fff;
+  }
+  .formCont form input {
+    width: 80%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    height: 25px;
+    outline: unset;
+    padding: 5px;
+  }
+  .formCont form textarea {
+    width: 80%;
+    margin-bottom: 10px;
+    height: 60px;
+    border-radius: 10px;
+    outline: unset;
+    padding: 5px;
+  }
+
+  #sendMessage {
+    width: 75px;
+    background-color: #fff;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  #sendMessage:hover {
+    border: 2px solid #fff;
+    background-color: #333;
+    color: #fff;
+  }
+  .slider > ul {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: 4;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+  }
+  .slider > ul > li {
+    width: 10px;
+    height: 10px;
+  }
 }
