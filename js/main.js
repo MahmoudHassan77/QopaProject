@@ -18,7 +18,7 @@ const goToFirst = () => {
 };
 
 const downloadPdf = () => {
-  window.open("file.pdf");
+  window.open("../media/file.pdf");
 };
 
 $("#name").change(() => {
