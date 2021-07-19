@@ -1,0 +1,332 @@
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: unset;
+  text-decoration: none;
+  background-image: url(../media/bbb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Markazi Text", serif;
+  scroll-behavior: smooth;
+  cursor: url(../media/cursor.png), auto;
+}
+
+.hedDiv {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.vidPlayer {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vidPlayer h1 {
+  color: rgb(8, 121, 23);
+  font-size: 100px;
+}
+.vidPlayer h1 span {
+  color: rgb(204, 207, 15);
+}
+.vidPlayer video {
+  width: 85%;
+  height: 400px;
+}
+.background {
+  height: 100%;
+  width: 50%;
+  background-color: rgb(204, 174, 119);
+  background-image: url(https://pbs.twimg.com/media/Cc2FNgSWwAAYx-b.jpg);
+  background-repeat: unset;
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 43% 51%, 0 0);
+}
+.disableBlur {
+  filter: blur(0);
+}
+.album {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "Roboto Condensed", sans-serif; */
+  overflow-x: hidden;
+}
+
+.album h1 {
+  margin: 150px auto 30px auto;
+  text-align: center;
+  color: #fff;
+}
+
+.album .hi-slide {
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin: 115px auto 0;
+}
+
+.album .hi-slide .hi-next,
+.album .hi-slide .hi-prev {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  border-radius: 50px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  transition: all 0.6s;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #333;
+}
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover {
+  opacity: 1;
+  background-color: #333;
+  color: #fff;
+}
+
+.hi-slide .hi-prev {
+  left: -60px;
+}
+
+.hi-slide .hi-prev::before {
+  content: "<";
+}
+.hi-slide .hi-next {
+  right: -60px;
+}
+.hi-slide .hi-next::before {
+  content: ">";
+}
+
+.hi-slide > ul {
+  list-style: none;
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin: 0;
+  padding: 0;
+}
+
+.hi-slide > ul > li {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  left: 377px;
+  top: 146px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 3px solid #fff;
+  background-color: #333;
+  cursor: pointer;
+}
+
+.hi-slide > ul > li > img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+.albHedDiv {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+.albumHed {
+  color: #333;
+  margin-left: 10px;
+  font-size: 50px;
+}
+.btnAlbum {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 5px;
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bolder;
+  font-family: "Markazi Text", serif;
+}
+.btnAlbum:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.to-top {
+  background: #fff;
+  border: 2px solid #333;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #333;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  background-color: #333;
+  color: #fff;
+  bottom: 32px;
+  pointer-events: auto;
+  border: 1px solid white;
+  opacity: 1;
+}
+.to-top.active:hover {
+  border: 2px solid white;
+}
+.desc {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+.desc p {
+  width: 50%;
+  margin-right: 70px;
+  font-size: 40px;
+  color: #fff;
+}
+.desc p span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.desc p span:hover {
+  color: rgb(206, 219, 22);
+}
+.contact {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.authImg {
+  margin: 20px;
+  height: 50%;
+  width: 50%;
+  background-image: url(../media/auth.jpg);
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+.authinfo {
+  height: 50%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  transition: border 3s;
+}
+.formCont {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  background-color: #333;
+  clip-path: polygon(50% 0, 100% 0%, 87% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.formCont form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 130px;
+  color: #fff;
+  width: 40%;
+}
+.formCont form input {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  height: 25px;
+  outline: unset;
+  padding: 5px;
+}
+.formCont h1 {
+  margin-left: 130px;
+  color: #fff;
+}
+.formCont form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 60px;
+  border-radius: 10px;
+  outline: unset;
+  padding: 5px;
+}
+
+#sendMessage {
+  width: 75px;
+  background-color: #fff;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bolder;
+}
+#sendMessage:hover {
+  border: 2px solid #fff;
+  background-color: #333;
+  color: #fff;
+}
+.valid-message {
+  color: red;
+  text-align: right;
+  width: 100%;
+  display: none;
+}
+.invalid-message {
+  display: inline-block;
+}
