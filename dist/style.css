@@ -54,7 +54,7 @@ html {
   height: 100%;
   width: 50%;
   background-color: rgb(204, 174, 119);
-  background-image: url(https://pbs.twimg.com/media/Cc2FNgSWwAAYx-b.jpg);
+  background-image: url(../media/bcc.jpg);
   background-repeat: unset;
   background-size: cover;
   clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 43% 51%, 0 0);
