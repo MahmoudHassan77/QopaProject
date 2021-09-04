@@ -484,7 +484,7 @@ html {
   }
   .vidPlayer h1 {
     color: rgb(8, 121, 23);
-    font-size: 70px;
+    font-size: 65px;
   }
   .vidPlayer h1 span {
     color: rgb(204, 207, 15);
@@ -498,7 +498,7 @@ html {
     height: 40%;
     width: 100%;
     background-color: rgb(204, 174, 119);
-    background-image: url(https://pbs.twimg.com/media/Cc2FNgSWwAAYx-b.jpg);
+    background-image: url(../media/bcc.jpg);
     background-repeat: unset;
     background-size: cover;
     clip-path: polygon(0% 0%, 100% 0, 100% 100%, 49% 58%, 0 100%);
