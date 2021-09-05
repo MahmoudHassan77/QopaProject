@@ -483,8 +483,11 @@ html {
     margin-bottom: 20px;
   }
   .vidPlayer h1 {
-    color: rgb(8, 121, 23);
-    font-size: 65px;
+    width: 100%;
+    text-align: center;
+    color: #1a0f0e;
+    font-size: 2.5rem;
+    font-weight: bolder;
   }
   .vidPlayer h1 span {
     color: rgb(204, 207, 15);
