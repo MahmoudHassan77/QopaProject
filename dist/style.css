@@ -96,10 +96,15 @@ html {
   font-size: larger;
   font-weight: bolder;
   font-family: "Markazi Text", serif;
-}
-.btnAlbum:hover {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #333;
   color: #fff;
+}
+.btnAlbum:hover {
+  border: 2px double #747171;
 }
 
 .to-top {
@@ -509,6 +514,7 @@ html {
   .albumHed {
     margin-left: 10px;
     font-size: 30px;
+    text-decoration: none;
   }
   .desc {
     height: 100vh;
