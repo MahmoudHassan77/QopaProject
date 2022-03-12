@@ -180,20 +180,13 @@ html {
 }
 .authImg {
   margin: 20px;
-  height: 50%;
-  width: 50%;
+  height: 25%;
+  width: 64%;
   background-image: url(../media/auth.jpg);
-  background-position: center;
-  background-size: cover;
-  clip-path: polygon(
-    50% 0%,
-    90% 20%,
-    100% 60%,
-    75% 100%,
-    25% 100%,
-    0% 60%,
-    10% 20%
-  );
+  /* background-position: center; */
+  background-size: contain;
+ /*background-clip: content-box; */
+  /* clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); */
 }
 .authinfo {
   height: 50%;
@@ -551,20 +544,12 @@ html {
   }
   .authImg {
     margin: 20px;
-    height: 50%;
-    width: 70%;
+    height: 18%;
+    width: 75%;
     background-image: url(../media/auth.jpg);
-    background-position: center;
-    background-size: cover;
-    clip-path: polygon(
-      50% 0%,
-      90% 20%,
-      100% 60%,
-      75% 100%,
-      25% 100%,
-      0% 60%,
-      10% 20%
-    );
+    /* background-position: center; */
+    background-size:contain;
+    /* clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); */
   }
   .authinfo {
     height: 50%;
